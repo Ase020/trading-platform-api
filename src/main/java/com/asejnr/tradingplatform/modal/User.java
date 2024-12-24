@@ -14,7 +14,7 @@ public class User {
 
     private String fullName;
     private String email;
-    private String phone;
+    private String mobile;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
@@ -30,7 +30,7 @@ public class User {
                 "id=" + id +
                 ", fullName='" + fullName + '\'' +
                 ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
+                ", mobile='" + mobile + '\'' +
                 ", password='" + password + '\'' +
                 ", twoFactorAuth=" + twoFactorAuth +
                 ", role=" + role +

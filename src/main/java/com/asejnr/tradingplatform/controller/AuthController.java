@@ -52,7 +52,7 @@ public class AuthController {
         newUser.setFullName(user.getFullName());
         newUser.setEmail(user.getEmail());
         newUser.setPassword(user.getPassword());
-        newUser.setPhone(user.getPhone());
+        newUser.setMobile(user.getMobile());
 
         User savedUser = userRepository.save(newUser);
 
@@ -126,7 +126,8 @@ public class AuthController {
         return new UsernamePasswordAuthenticationToken(userDetails, password, userDetails.getAuthorities());
     }
 
-    public ResponseEntity<AuthResponse> verifySigningOTP(@PathVariable String otp, @RequestParam String id) throws Exception {
+    @PostMapping("/two-factor/otp/{otp}")
+    public ResponseEntity<AuthResponse> verifySigninOTP(@PathVariable String otp, @RequestParam String id) throws Exception {
 
         TwoFactorOTP twoFactorOTP = twoFactorOTPService.findById(id);
         if (twoFactorOTPService.verifyTwoFactorOTP(twoFactorOTP, otp)) {
