@@ -1,15 +1,14 @@
 package com.asejnr.tradingplatform.controller;
 
 import com.asejnr.tradingplatform.config.JwtProvider;
-import com.asejnr.tradingplatform.modal.TwoFactorOTP;
-import com.asejnr.tradingplatform.modal.User;
+import com.asejnr.tradingplatform.model.TwoFactorOTP;
+import com.asejnr.tradingplatform.model.User;
 import com.asejnr.tradingplatform.repository.UserRepository;
 import com.asejnr.tradingplatform.response.AuthResponse;
 import com.asejnr.tradingplatform.service.CustomerUserDetailsService;
 import com.asejnr.tradingplatform.service.EmailService;
 import com.asejnr.tradingplatform.service.TwoFactorOTPService;
 import com.asejnr.tradingplatform.utils.OtpUtils;
-import io.jsonwebtoken.Jwts;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

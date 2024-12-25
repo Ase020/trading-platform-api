@@ -1,8 +1,8 @@
 package com.asejnr.tradingplatform.service;
 
 import com.asejnr.tradingplatform.domain.VerificationType;
-import com.asejnr.tradingplatform.modal.User;
-import com.asejnr.tradingplatform.modal.VerificationCode;
+import com.asejnr.tradingplatform.model.User;
+import com.asejnr.tradingplatform.model.VerificationCode;
 
 public interface VerificationCodeService {
     VerificationCode sendVerificationOTPCode(User user, VerificationType verificationType);

@@ -1,8 +1,8 @@
 package com.asejnr.tradingplatform.service;
 
 import com.asejnr.tradingplatform.domain.VerificationType;
-import com.asejnr.tradingplatform.modal.User;
-import com.asejnr.tradingplatform.modal.VerificationCode;
+import com.asejnr.tradingplatform.model.User;
+import com.asejnr.tradingplatform.model.VerificationCode;
 import com.asejnr.tradingplatform.repository.VerificationCodeRepository;
 import com.asejnr.tradingplatform.utils.OtpUtils;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package com.asejnr.tradingplatform.service;
 
 import com.asejnr.tradingplatform.domain.VerificationType;
-import com.asejnr.tradingplatform.modal.User;
+import com.asejnr.tradingplatform.model.User;
 
 public interface UserService {
     public User findUserProfileByJwt(String jwt) throws Exception;

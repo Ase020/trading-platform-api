@@ -1,7 +1,7 @@
 package com.asejnr.tradingplatform.service;
 
-import com.asejnr.tradingplatform.modal.TwoFactorOTP;
-import com.asejnr.tradingplatform.modal.User;
+import com.asejnr.tradingplatform.model.TwoFactorOTP;
+import com.asejnr.tradingplatform.model.User;
 
 public interface TwoFactorOTPService {
     TwoFactorOTP createTwoFactorOTP(User user, String otp, String jwtToken);

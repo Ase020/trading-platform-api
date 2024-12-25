@@ -1,4 +1,4 @@
-package com.asejnr.tradingplatform.modal;
+package com.asejnr.tradingplatform.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;

@@ -1,4 +1,4 @@
-package com.asejnr.tradingplatform.modal;
+package com.asejnr.tradingplatform.model;
 
 import com.asejnr.tradingplatform.domain.USER_ROLE;
 import com.fasterxml.jackson.annotation.JsonProperty;

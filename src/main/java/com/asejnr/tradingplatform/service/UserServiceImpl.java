@@ -2,8 +2,8 @@ package com.asejnr.tradingplatform.service;
 
 import com.asejnr.tradingplatform.config.JwtProvider;
 import com.asejnr.tradingplatform.domain.VerificationType;
-import com.asejnr.tradingplatform.modal.TwoFactorAuth;
-import com.asejnr.tradingplatform.modal.User;
+import com.asejnr.tradingplatform.model.TwoFactorAuth;
+import com.asejnr.tradingplatform.model.User;
 import com.asejnr.tradingplatform.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

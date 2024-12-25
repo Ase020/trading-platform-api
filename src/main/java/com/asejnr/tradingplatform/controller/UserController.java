@@ -1,9 +1,9 @@
 package com.asejnr.tradingplatform.controller;
 
 import com.asejnr.tradingplatform.domain.VerificationType;
-import com.asejnr.tradingplatform.modal.ForgotPasswordToken;
-import com.asejnr.tradingplatform.modal.User;
-import com.asejnr.tradingplatform.modal.VerificationCode;
+import com.asejnr.tradingplatform.model.ForgotPasswordToken;
+import com.asejnr.tradingplatform.model.User;
+import com.asejnr.tradingplatform.model.VerificationCode;
 import com.asejnr.tradingplatform.request.ForgotPasswordTokenRequest;
 import com.asejnr.tradingplatform.request.ResetPasswordRequest;
 import com.asejnr.tradingplatform.response.ApiResponse;
