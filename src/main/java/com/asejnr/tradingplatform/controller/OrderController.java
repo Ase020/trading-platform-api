@@ -4,12 +4,13 @@ import com.asejnr.tradingplatform.domain.OrderType;
 import com.asejnr.tradingplatform.model.Coin;
 import com.asejnr.tradingplatform.model.Order;
 import com.asejnr.tradingplatform.model.User;
+import com.asejnr.tradingplatform.model.Withdrawal;
 import com.asejnr.tradingplatform.request.CreateOrderRequest;
 import com.asejnr.tradingplatform.service.CoinService;
 import com.asejnr.tradingplatform.service.OrderService;
 import com.asejnr.tradingplatform.service.UserService;
+import com.asejnr.tradingplatform.service.WithdrawalService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,7 +27,9 @@ public class OrderController {
     @Autowired
     private CoinService coinService;
     @Autowired
-    private WallTransactionService wallTransactionService;
+    private WithdrawalService withdrawalService;
+//    @Autowired
+//    private WallTransactionService wallTransactionService;
 
     @PostMapping("/pay")
     public ResponseEntity<Order> payOrderPayment(
@@ -65,5 +68,13 @@ public class OrderController {
         return ResponseEntity.ok(userOrders);
     }
 
+    @GetMapping("/api/admin/withdrawal")
+    public ResponseEntity<List<Withdrawal>> getAllWithdrawalRequest(
+            @RequestHeader("Authorization") String jwtToken
+    ) throws Exception {
+        User user = userService.findUserProfileByJwt(jwtToken);
+        List<Withdrawal> withdrawals = withdrawalService.getAllWithdrawalRequests();
 
+        return ResponseEntity.ok(withdrawals);
+    }
 }
