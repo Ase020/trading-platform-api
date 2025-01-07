@@ -6,6 +6,7 @@ import lombok.Data;
 
 @Data
 @Entity
+@Table(name="order_item")
 public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

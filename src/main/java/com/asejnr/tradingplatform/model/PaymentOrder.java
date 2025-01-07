@@ -7,6 +7,7 @@ import lombok.Data;
 
 @Data
 @Entity
+@Table(name="payment_order")
 public class PaymentOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,6 +17,7 @@ public class PaymentOrder {
     private PaymentMethod paymentMethod;
 
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
 }

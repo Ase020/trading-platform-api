@@ -2,13 +2,11 @@ package com.asejnr.tradingplatform.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.crypto.SecretKey;
-import java.time.Instant;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
@@ -37,8 +35,7 @@ public class JwtProvider {
                 .parseClaimsJws(token)
                 .getBody();
 
-        String email = String.valueOf(claims.get("email"));
-     return null;
+        return String.valueOf(claims.get("email"));
     }
 
     private static String populateAuthorities(Collection<? extends GrantedAuthority> authorities) {

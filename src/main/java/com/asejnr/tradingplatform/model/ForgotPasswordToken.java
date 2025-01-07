@@ -6,6 +6,7 @@ import lombok.Data;
 
 @Entity
 @Data
+@Table(name = "forgot_password_token")
 public class ForgotPasswordToken {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
