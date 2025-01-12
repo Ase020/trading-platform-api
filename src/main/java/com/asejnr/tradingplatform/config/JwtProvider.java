@@ -13,7 +13,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class JwtProvider {
-    private static SecretKey secretKey = Keys.hmacShaKeyFor(JwtConstant.JWT_SECRET.getBytes());
+    private static final SecretKey secretKey = Keys.hmacShaKeyFor(JwtConstant.JWT_SECRET.getBytes());
     public static String generateToken(Authentication authentication) {
         Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
         String roles = populateAuthorities(authorities);
